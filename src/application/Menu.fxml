@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="500.0" styleClass="root" stylesheets="@type.css">
+         <children>
+            <Button fx:id="nextBtn" layoutX="434.0" layoutY="396.0" mnemonicParsing="false" onAction="#change" text="Next" />
+            <RadioButton fx:id="radioBtn1" layoutX="30.0" layoutY="53.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="198.0" stylesheets="@type.css" text="Matrix Power" textFill="#1b1b1b">
+               <font>
+                  <Font name="Consolas Bold" size="21.0" />
+               </font>
+               <toggleGroup>
+                  <ToggleGroup fx:id="type" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="radioBtn2" layoutX="30.0" layoutY="113.0" mnemonicParsing="false" onKeyPressed="#handle" prefHeight="39.0" prefWidth="234.0" stylesheets="@type.css" text="Matrix Transpose" textFill="#1b1b1b" toggleGroup="$type">
+               <font>
+                  <Font name="Consolas Bold" size="21.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioBtn3" layoutX="30.0" layoutY="171.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="293.0" stylesheets="@type.css" text="Matrix Multiplication" textFill="#1b1b1b" toggleGroup="$type">
+               <font>
+                  <Font name="Consolas Bold" size="21.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioBtn4" layoutX="30.0" layoutY="230.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="407.0" stylesheets="@type.css" text="Matrix Addition and Subtraction" textFill="#1b1b1b" toggleGroup="$type">
+               <font>
+                  <Font name="Consolas Bold" size="21.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioBtn5" layoutX="30.0" layoutY="294.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="219.0" stylesheets="@type.css" text="Inverse Matrix" textFill="#1b1b1b" toggleGroup="$type">
+               <font>
+                  <Font name="Consolas Bold" size="21.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="radioBtn6" layoutX="30.0" layoutY="364.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="219.0" stylesheets="@type.css" text="Determinant" textFill="#1b1b1b" toggleGroup="$type">
+               <font>
+                  <Font name="Consolas Bold" size="21.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

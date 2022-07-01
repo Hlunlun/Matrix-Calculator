@@ -1,0 +1,39 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.root{
+	-fx-background-image:
+		url("https://cf.shopee.tw/file/9e3807edc3b9d79b8c6b47056279f890");
+	-fx-background-size: cover;
+	-fx-font-family:'Comic Sans MS';
+	-fx-text-fill:'darkcyan'; 
+}
+.radio-button{       
+    
+    -fx-font-family:'Comic Sans MS';   
+    -fx-text-fill:'darkcyan';
+    -fx-font-size:21;
+    -fx-font-weight:bold;
+    
+}
+
+
+.button{
+    -fx-background-radius:5em;        
+    -fx-background-color:'white';
+    -fx-font-family:'Comic Sans MS';   
+    -fx-text-fill:'darkcyan';  
+    -fx-border-radius:5em;
+    -fx-border-color:'black';
+	-fx-border-width: 3;
+    
+    //-fx-font-weight:'bold';
+}
+
+.label{	
+	//-fx-font-weight:'bold';
+	-fx-font-family:'Comic Sans MS';	
+	-fx-text-fill: 'darkcyan';
+	
+}
+
+
+

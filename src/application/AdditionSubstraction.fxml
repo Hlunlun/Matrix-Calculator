@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AdditionController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="750.0" styleClass="root" stylesheets="@type.css">
+         <children>
+            <Spinner fx:id="spinnerN" editable="true" layoutX="291.0" layoutY="30.0" onKeyPressed="#handle" prefHeight="40.0" prefWidth="75.0" />
+            <Label layoutX="134.0" layoutY="43.0" style="-fx-font-weight: bold;" text="Matrix dimension:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="spinnerM" layoutX="388.0" layoutY="30.0" onKeyPressed="#handle" prefHeight="40.0" prefWidth="75.0" />
+            <Label layoutX="374.0" layoutY="46.0" text="x" />
+            <Button fx:id="setValueBtn" layoutX="650.0" layoutY="18.0" mnemonicParsing="false" onAction="#setValue" text="Set matrix" />
+            <Button fx:id="gomenu" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#menu" text="Menu" />
+            <Button fx:id="calculateBtn" disable="true" layoutX="661.0" layoutY="611.0" mnemonicParsing="false" onAction="#calculate" text="Calculate" />
+            <Button fx:id="checkBtn" layoutX="594.0" layoutY="611.0" mnemonicParsing="false" onAction="#checkEmptyAction" text="Check" />
+            <Label fx:id="inputLabel" layoutX="134.0" layoutY="100.0" text="Please input intger in matrix" visible="false" />
+            <GridPane fx:id="grid1" layoutX="6.0" layoutY="128.0" prefHeight="450.0" prefWidth="365.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Button fx:id="clearBtn" layoutX="534.0" layoutY="611.0" mnemonicParsing="false" onAction="#clearButtonAction" text="Clear" />
+            <GridPane fx:id="grid2" layoutX="379.0" layoutY="128.0" prefHeight="450.0" prefWidth="365.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+            </GridPane>
+            <Label layoutX="157.0" layoutY="182.0" style="-fx-font-weight: bold;" text="Matrix A">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label layoutX="520.0" layoutY="182.0" style="-fx-font-weight: bold;" text="Matrix B">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <RadioButton fx:id="plus" layoutX="509.0" layoutY="11.0" mnemonicParsing="false" text="+">
+               <toggleGroup>
+                  <ToggleGroup fx:id="operator" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="minus" layoutX="509.0" layoutY="52.0" mnemonicParsing="false" text="-" toggleGroup="$operator" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

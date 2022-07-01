@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InverseController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="750.0" styleClass="root" stylesheets="@type.css">
+         <children>
+            <Spinner fx:id="spinnerN" editable="true" layoutX="273.0" layoutY="13.0" onKeyPressed="#handle" prefHeight="40.0" prefWidth="75.0" />
+            <Label layoutX="134.0" layoutY="26.0" style="-fx-font-weight: bold;" text="Matrix dimension:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Button fx:id="setValueBtn" layoutX="650.0" layoutY="18.0" mnemonicParsing="false" onAction="#setValue" text="Set matrix" />
+            <Button fx:id="gomenu" layoutX="10.0" layoutY="18.0" mnemonicParsing="false" onAction="#menu" text="Menu" />
+            <Button fx:id="calculateBtn" disable="true" layoutX="661.0" layoutY="611.0" mnemonicParsing="false" onAction="#calculate" text="Calculate" />
+            <Button fx:id="checkBtn" layoutX="594.0" layoutY="611.0" mnemonicParsing="false" onAction="#checkEmpty" text="Check" />
+            <Label fx:id="inputLabel" layoutX="134.0" layoutY="60.0" text="Please input intger in matrix" visible="false" />
+            <GridPane fx:id="grid" layoutX="14.0" layoutY="84.0" prefHeight="520.0" prefWidth="730.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+            <Button fx:id="clearBtn" layoutX="534.0" layoutY="611.0" mnemonicParsing="false" onAction="#clearButtonAction" text="Clear" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
